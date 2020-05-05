@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Login page</title>
+
+    <style>
+        #login {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        #login h1 {
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        #login input {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #login input[type=submit] {
+            border: 0;
+            background: #4367c4;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="login">
+        <h1>LOGIN</h1>
+        <input type="email" placeholder="Email Address" id="userid" required />
+        <input type="password" placeholder="Password" id="pswrd" required />
+        <input type="submit" onclick="check(this.form)" value="Login" />
+    </form>
+    <script language="javascript">
+        function check(form) {
+
+            if (form.userid.value == "flatiron" && form.pswrd.value == "school") {
+                window.location.replace('index.html')/*opens the target page while Id & password matches*/
+            }
+            else {
+                alert("Wrong Password or Username")/*displays error message*/
+            }
+        }
+    </script>
+</body>
+
+</html>

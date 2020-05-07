@@ -69,10 +69,10 @@ function toggle(e){
     }
 }
 
-
-function setItemToDelete(target, itemList){
-    console.log("OK")
+function deleteItemLists(){
+    let lists= getLists()
 }
+
 
 function updateOrPostItemList(target, itemList) {
     listID = document.getElementsByClassName("active")[0].dataset.id

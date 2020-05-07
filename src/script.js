@@ -36,6 +36,8 @@ window.onload = function () {
 
         if (e.target.className === "listInput") {
             updateOrPostItemList(e.target, e.target.dataset.itemList)
+            deleteItemLists()
+
 
         }
     })
@@ -52,25 +54,52 @@ window.onload = function () {
     })
 }
 
-window.onbeforeunload = function(){
-    deleteItemLists()
-}
+
 
 function toggle(e){
-    console.dir(e.target)
+
     if(e.target.style.textDecoration === ""){
         e.target.style.textDecoration ="line-through"
         e.target.style.color ="gray"
         e.target.dataset.delete =true
+        addToDelete(e.target)
     }else{
         e.target.style.textDecoration =""
         e.target.style.color ="black"
         e.target.removeAttribute("data-delete")
+        removeFromDelete(e.target)
     }
 }
 
+function addToDelete(target){
+   
+let del= document.getElementById("toDelete")
+console.log(del)
+del.innerText= del.innerText + ` ${target.dataset.itemList}, `
+}
+
+function removeFromDelete(target){
+    let del= document.getElementById("toDelete")
+    let id= target.dataset.itemList
+    console.log(`ID: ${id}`)
+    let match= del.innerText.indexOf(`${id},`)
+    console.dir(match)
+    let str= del.innerText.slice(0, match) + del.innerText.slice(match+(id.length+1),del.innerText.length)
+    del.innerText=str
+}
 function deleteItemLists(){
-    let lists= getLists()
+    let del= document.getElementById("toDelete")
+    let delArr= del.innerText.split(",")
+    for(itemList of delArr){
+       let d= document.querySelectorAll(`[data-item-list~="${itemList}"]`)
+   
+        d.value= ""
+        console.log(d)
+        fetch(`http://localhost:3000/item_lists/${itemList}`, {
+            method: 'DELETE'
+
+        })
+    }
 }
 
 

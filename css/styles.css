@@ -144,3 +144,10 @@ i{
 .fas fa-angle-double-right{
     font-size:40px;
 }
+
+#center{
+    margin:auto;
+    width:80%;
+    margin-left:15em;
+    margin-top:4em;
+}

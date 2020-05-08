@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
 }
 
 body::webkit-scrollbar-thumb{
-    background:#6659b8;
+    background:#DCDCF5;
 }
 
 
@@ -72,7 +72,7 @@ justify-content: flex-start;
     text-align:center;
     color: var(--text-secondary);
     background: var(--bg-secondary);
-    font-size: 1.5rem;
+    font-size: 1.4em;
     letter-spacing: .3ch;
     width:100%;
     height:10%;
@@ -137,7 +137,7 @@ justify-content: flex-start;
 }
 
 i{
-    color:#ff7eee;
+    color:#815BFF;
     font-size:30px;
 }
 
@@ -147,7 +147,165 @@ i{
 
 #center{
     margin:auto;
-    width:80%;
+    width:55%;
     margin-left:15em;
-    margin-top:4em;
+    margin-top:5.2em;
+}
+
+#lists{
+    width:100%;
+    background:#f1f1f1;
+    border: 1px black solid;
+}
+.tabLinks{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin-bottom:3px;
+    font-size:15px;
+ 
+}
+#listsSearchButton{
+    float:right;
+    margin-top:30px;
+    height:23px;
+
+}
+#listsSearchButton i{
+    font-size:15px;
+}
+
+#listsInput{
+    float:right;
+margin-top:30px;
+}
+
+.tabLinks:hover{
+    background-color: #ddd;
+}
+
+.tabLinks:active{
+    background-color:#ccc;
+}
+
+.tabLinksRight{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin-bottom:3px;
+    font-size:15px;
+    float:right;
+ 
+}
+.tabLinksRight:hover{
+    background-color: #ddd;
+}
+
+.tabLinksRight:active{
+    background-color:#ccc;
+}
+
+.active{
+    background-color:#ccc;
+
+}
+#listContent{
+    background-color:beige;
+    width:100%;
+    height:26em;
+    overflow:scroll;
+}
+
+.listInput{
+    border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-color:black;
+        border-bottom:1px solid black;
+        width: 90%;
+        margin-left:5%;
+        background-color:beige;
+        margin-top:5px;
+        height:25px;
+        font-size:20px;
+      
+
+}
+.listInput:focus {
+    outline: none;
+  }
+
+  #toDelete{
+      display: none;
+  }
+
+  #content{
+display:none;
+  }
+
+  #heading{
+    height:50px;
+  }
+  #header{
+      float:left;
+      margin-bottom:5px;
+  }
+
+  #login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+#login h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+#login input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+#login input[type=submit] {
+    border: 0;
+    background: #4367c4;
+    color: #fff;
+}
+
+#addForm{
+    display:none;
+    
+    width:200px;
+    background-color:#4367c4 ;
+    float:right;
+    margin-right:40%;;
+}
+
+#addUser{
+    color:black;
+    font-size: 15px;
+}
+
+#addList{
+    color:black;
+    font-size: 15px;
+}
+
+#addUserForm{
+    display:none;
+    
+    width:200px;
+    background-color:#4367c4 ;
+    float:right;
+    margin-right:40%;; 
 }
